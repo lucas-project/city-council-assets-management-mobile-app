@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="bac"
+            android:src="@mipmap/info_bac" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ADD DETAILS"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Please add details for the issue"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="Please describe the issue here..."
+        app:hintTextColor="#f00"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/edit_detail"
+        android:textColor="#000"
+        android:gravity="top|left"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edit_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+    <TextView
+        android:onClick="doNext"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="CONTINUE"
+        android:textColor="#000"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_reg"
+        android:layout_width="240dp"
+        android:layout_height="40dp"/>
+</LinearLayout>

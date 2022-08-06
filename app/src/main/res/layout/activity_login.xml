@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/purple_500">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="WELCOME TO CITY COUNCIL ISSUE REPORTER"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/info_login"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="E-mail address"
+        app:hintEnabled="true"
+        app:hintTextColor="#f00">
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        app:hintEnabled="true"
+        app:hintTextColor="#f00">
+
+        <EditText
+            android:id="@+id/edit_pwd"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:onClick="doReg"
+        android:text="No account? Register now!"
+        android:textColor="#666"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"/>
+    <TextView
+        android:onClick="doLogin"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="#000"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_login"
+        android:layout_width="240dp"
+        android:layout_height="40dp"/>
+
+</LinearLayout>
