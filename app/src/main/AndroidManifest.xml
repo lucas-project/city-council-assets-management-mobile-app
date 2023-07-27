@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.application.issue_reporter">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.application.issue_reporter.ReportDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.SearchActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.ReportActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.ImageActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.DistanceActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.SelectionActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.MapActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.application.issue_reporter.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.application.issue_reporter.ManageActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.application.issue_reporter.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
